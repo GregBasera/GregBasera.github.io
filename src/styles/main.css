@@ -1,0 +1,18 @@
+.pl-icon {
+  font-size: 3em;
+}
+
+.panel {
+  height: 100vh;
+}
+
+.project-area {
+  height: 90vh;
+  overflow-y: auto;
+}
+
+.card-columns {
+  -webkit-column-count: 2;
+          column-count: 2;
+}
+/*# sourceMappingURL=main.css.map */

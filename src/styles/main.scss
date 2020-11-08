@@ -1,0 +1,20 @@
+@function hunit($multiplier) {
+  @return $multiplier * (100vh / 12);
+}
+
+.pl-icon {
+  font-size: 3em;
+}
+
+.panel {
+  height: hunit(12);
+}
+
+.project-area {
+  height: hunit(10.8);
+  overflow-y: auto;
+}
+
+.card-columns {
+  column-count: 2;
+}
