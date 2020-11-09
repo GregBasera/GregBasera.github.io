@@ -2,16 +2,28 @@
   @return $multiplier * (100vh / 12);
 }
 
-.pl-icon {
+.pl-icon-3 {
   font-size: 3em;
+}
+.pl-icon-2 {
+  font-size: 2em;
+}
+
+.point8-fsize {
+  font-size: 0.8em;
 }
 
 .panel {
   height: hunit(12);
 }
 
-.project-area {
+.introductions {
   height: hunit(10.8);
+  // background-color: teal;
+}
+
+.project-area {
+  height: hunit(12);
   overflow-y: auto;
 }
 

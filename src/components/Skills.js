@@ -3,24 +3,26 @@ import { Button } from "react-bootstrap";
 
 export default function Skills() {
   const iconNames = [
-    "devicon-c-plain colored",
-    "devicon-cplusplus-plain colored",
-    "devicon-python-plain colored",
-    "devicon-java-plain colored",
-    "devicon-html5-plain colored",
-    "devicon-css3-plain colored",
-    "devicon-bootstrap-plain colored",
-    "devicon-sass-original colored",
-    "devicon-javascript-plain colored",
-    "devicon-react-original colored",
-    "devicon-jquery-plain colored",
-    "devicon-electron-original colored",
-    "devicon-php-plain colored",
-    "devicon-codeigniter-plain colored",
-    "devicon-mysql-plain colored",
-    "devicon-mongodb-plain colored",
-    "devicon-apache-plain colored",
-    "devicon-git-plain colored",
+    "c-plain",
+    "cplusplus-plain",
+    "python-plain",
+    "java-plain",
+    "html5-plain",
+    "css3-plain",
+    "bootstrap-plain",
+    "sass-original",
+    "javascript-plain",
+    "react-original",
+    "jquery-plain",
+    "electron-original",
+    "php-plain",
+    "codeigniter-plain",
+    "mysql-plain",
+    "mongodb-plain",
+    "apache-plain",
+    "git-plain",
+    "nodejs-plain",
+    "express-original",
   ];
   // some PLangs have no available icons
   const links = [
@@ -40,16 +42,16 @@ export default function Skills() {
 
   return (
     <div>
-      {iconNames.map((i) => {
+      {iconNames.map((i, index) => {
         return (
-          <Button className="btn-light" title="C">
-            <i className={`pl-icon ${i}`}></i>
+          <Button className="btn-light" key={index.toString()} title={i.split("-")[0].toUpperCase()}>
+            <i className={`pl-icon-3 devicon-${i} colored`}></i>
           </Button>
         );
       })}
-      {links.map((i) => {
+      {links.map((i, index) => {
         return (
-          <Button className="btn-light">
+          <Button className="btn-light" key={index.toString()} title={i.alt.toUpperCase()}>
             <img src={i.pnglink} alt={i.alt} />
           </Button>
         );

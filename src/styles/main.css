@@ -1,13 +1,25 @@
-.pl-icon {
+.pl-icon-3 {
   font-size: 3em;
+}
+
+.pl-icon-2 {
+  font-size: 2em;
+}
+
+.point8-fsize {
+  font-size: 0.8em;
 }
 
 .panel {
   height: 100vh;
 }
 
-.project-area {
+.introductions {
   height: 90vh;
+}
+
+.project-area {
+  height: 100vh;
   overflow-y: auto;
 }
 
