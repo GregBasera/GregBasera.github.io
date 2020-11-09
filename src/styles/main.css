@@ -18,6 +18,10 @@
   height: 90vh;
 }
 
+.carouselImage {
+  height: 66.66667vh;
+}
+
 .project-area {
   height: 100vh;
   overflow-y: auto;
