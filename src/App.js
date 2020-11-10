@@ -53,7 +53,7 @@ function App() {
               <h2 className="text-center mb-3">Full-Stack Developer</h2>
             </Container>
 
-            <Container className="mb-3 text-center">
+            <Container className="mb-5 text-center">
               <Skills />
             </Container>
           </Container>

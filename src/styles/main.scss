@@ -25,10 +25,23 @@
 }
 
 .project-area {
-  height: hunit(12);
   overflow-y: auto;
+  @media (min-width: 576px) {
+    min-height: hunit(12);
+  }
+
+  @media (min-width: 768px) {
+    height: hunit(12);
+  }
 }
 
 .card-columns {
-  column-count: 2;
+  // column-count: 2;
+  @media (min-width: 576px) {
+    column-count: 1;
+  }
+
+  @media (min-width: 768px) {
+    column-count: 2;
+  }
 }

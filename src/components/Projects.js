@@ -127,7 +127,7 @@ export default function Projects() {
   const [carouselArray, setcarouselArray] = React.useState([Gpic]);
 
   return (
-    <CardColumns>
+    <CardColumns className="mb-5">
       <Card bg="dark" body>
         <h5 className="mb-0 text-light">Projects</h5>
       </Card>
@@ -159,7 +159,7 @@ export default function Projects() {
                     setModalShow(true);
                   }}
                   disabled={i.clarray.length === 0 ? true : false}>
-                  Screenshots
+                  Screens
                 </Button>
               </Container>
             </Card.Body>
