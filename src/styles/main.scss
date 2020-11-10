@@ -14,10 +14,10 @@
 }
 
 .panel {
-  height: hunit(12);
+  min-height: hunit(12);
 }
 .introductions {
-  height: hunit(10.8);
+  min-height: hunit(10.8);
   // background-color: teal;
 }
 .carouselImage {

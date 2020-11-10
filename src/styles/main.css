@@ -11,11 +11,11 @@
 }
 
 .panel {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .introductions {
-  height: 90vh;
+  min-height: 90vh;
 }
 
 .carouselImage {
