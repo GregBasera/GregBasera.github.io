@@ -1,4 +1,5 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
+import PingDiscord from "./components/PingDiscord";
 
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
@@ -8,6 +9,8 @@ import resume from "./Resume_CV.pdf";
 import "./styles/main.css";
 
 function App() {
+  PingDiscord("Someone viewed your Porfolio.");
+
   return (
     <Container className="panel p-0" fluid>
       <Row className="panel" noGutters>
@@ -18,7 +21,7 @@ function App() {
 
           <Container className="introductions d-flex flex-wrap align-content-center">
             <Container>
-              <Row className="mb-5">
+              <Row className="my-5">
                 <Col sm={12} md>
                   <h1 className="display-2 text-sm-center text-md-right">Greg Basera</h1>
                 </Col>

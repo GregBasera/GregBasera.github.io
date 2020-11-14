@@ -12,7 +12,7 @@ export default function CarouselModal(props) {
           <Carousel>
             {props.clarray.map((i, index) => {
               return (
-                <Carousel.Item>
+                <Carousel.Item key={index}>
                   <img className="d-block w-100" src={i} alt="Carousel slide" />
                 </Carousel.Item>
               );
