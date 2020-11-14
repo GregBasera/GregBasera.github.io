@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import PingDiscord from "./components/PingDiscord";
+import pingDiscord from "./components/pingDiscord";
 
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
@@ -9,7 +10,30 @@ import resume from "./Resume_CV.pdf";
 import "./styles/main.css";
 
 function App() {
-  PingDiscord("Someone viewed your Porfolio.");
+  let names = [
+    "James",
+    "Mary",
+    "John",
+    "Patricia",
+    "Robert",
+    "Jennifer",
+    "Michael",
+    "Linda",
+    "William",
+    "Elizabeth",
+    "David",
+    "Barbara",
+    "Richard",
+    "Susan",
+    "Joseph",
+    "Jessica",
+    "Thomas",
+    "Sarah",
+    "Charles",
+    "Karen",
+  ];
+  const [randoName, setrandoName] = useState(names[Math.floor(Math.random() * 20)]);
+  pingDiscord(`${randoName} mistakenly searched your fucking site!`);
 
   return (
     <Container className="panel p-0" fluid>
@@ -32,7 +56,12 @@ function App() {
                   </p>
 
                   <Container className="p-0 d-flex justify-content-between">
-                    <Button variant="outline-dark align-self-center" onClick={() => window.open(resume, "_blank")}>
+                    <Button
+                      variant="outline-dark align-self-center"
+                      onClick={() => {
+                        pingDiscord(`${randoName} tried to access your Résumé.`);
+                        window.open(resume, "_blank");
+                      }}>
                       Résumé
                     </Button>
 
@@ -64,7 +93,7 @@ function App() {
 
         <Col sm={12} md={6} className="bg-light text-dark">
           <Container className="project-area py-3">
-            <Projects />
+            <Projects randoName={randoName} />
           </Container>
         </Col>
       </Row>

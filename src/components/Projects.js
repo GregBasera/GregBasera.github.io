@@ -37,8 +37,9 @@ import {
 } from "../images";
 import CarouselModal from "./CarouselModal";
 import Gpic from "../G.png";
+import pingDiscord from "./pingDiscord";
 
-export default function Projects() {
+export default function Projects(props) {
   const pills = [
     "C", // 0
     "C++",
@@ -147,7 +148,14 @@ export default function Projects() {
               </Card.Subtitle>
               <Card.Text>{i.description}</Card.Text>
               <Container className="d-flex justify-content-end p-0">
-                <Button className="ml-1" size="sm" variant="dark" onClick={() => window.open(i.code, "_blank")}>
+                <Button
+                  className="ml-1"
+                  size="sm"
+                  variant="dark"
+                  onClick={() => {
+                    pingDiscord(`${props.randoName} tried to take a peek in the ${i.title} repo.`);
+                    window.open(i.code, "_blank");
+                  }}>
                   Code
                 </Button>
                 <Button
@@ -156,6 +164,7 @@ export default function Projects() {
                   variant="dark"
                   onClick={() => {
                     setcarouselArray(i.clarray);
+                    pingDiscord(`${props.randoName} looked at the screenshots of ${i.title}.`);
                     setModalShow(true);
                   }}
                   disabled={i.clarray.length === 0 ? true : false}>
