@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Alert, Badge, Button, Card, CardColumns, Container } from "react-bootstrap";
 import {
   Blocks1,
@@ -125,6 +125,7 @@ export default function Projects(props) {
   ];
 
   const [modalShow, setModalShow] = React.useState(false);
+  const [modalTitle, setmodalTitle] = useState("modal");
   const [carouselArray, setcarouselArray] = React.useState([Gpic]);
 
   return (
@@ -165,6 +166,7 @@ export default function Projects(props) {
                   onClick={() => {
                     setcarouselArray(i.clarray);
                     pingDiscord(`${props.randoName} looked at the screenshots of ${i.title}.`);
+                    setmodalTitle(i.title);
                     setModalShow(true);
                   }}
                   disabled={i.clarray.length === 0 ? true : false}>
@@ -183,7 +185,7 @@ export default function Projects(props) {
         </div>
       </Alert>
 
-      <CarouselModal show={modalShow} onHide={() => setModalShow(false)} clarray={carouselArray} />
+      <CarouselModal show={modalShow} onHide={() => setModalShow(false)} clarray={carouselArray} title={modalTitle} />
     </CardColumns>
   );
 }

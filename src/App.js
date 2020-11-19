@@ -1,3 +1,4 @@
+import Axios from "axios";
 import { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import pingDiscord from "./components/pingDiscord";
@@ -33,7 +34,17 @@ function App() {
     "Karen",
   ];
   const [randoName, setrandoName] = useState(names[Math.floor(Math.random() * 20)]);
-  pingDiscord(`${randoName} mistakenly searched your fucking site!`);
+  // pingDiscord(`${randoName} mistakenly searched your fucking site!`);
+  Axios.get("https://cors-anywhere.herokuapp.com/http://api.ipify.org?format=json")
+    .then((res) => {
+      if (res.status === 200) {
+        pingDiscord(`${randoName} (@${res.data.ip}) mistakenly searched your fucking site!`);
+      } else {
+        pingDiscord(`${randoName} (@IPpinpoint failed) mistakenly searched your fucking site!`);
+      }
+      // console.log(res.data.ip);
+    })
+    .catch((error) => console.log(error));
 
   return (
     <Container className="panel p-0" fluid>
