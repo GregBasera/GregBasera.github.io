@@ -181,7 +181,7 @@ export default function Projects(props) {
         <b>Apologies, </b>I lack the resources to host most of my projects like many full-stack devs do. Some screenshots and my contact info are provided if you want to learn more
         about them.
         <div className="text-right">
-          <small>- Page last updated: Nov 9, 2020</small>
+          <small>- Page last updated: Dec 2, 2020</small>
         </div>
       </Alert>
 

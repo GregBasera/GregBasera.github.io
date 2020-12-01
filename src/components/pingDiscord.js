@@ -36,5 +36,4 @@ export default function pingDiscord(content, i) {
     .catch(function (error) {
       console.log("discord ping failed");
     });
-  // console.log(content);
 }

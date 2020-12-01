@@ -22,7 +22,8 @@ export default function Skills() {
     "apache-plain",
     "git-plain",
     "nodejs-plain",
-    "express-original",
+    // "express-original",
+    "docker-plain",
   ];
   // some PLangs have no available icons
   const links = [
@@ -38,6 +39,10 @@ export default function Skills() {
       pnglink: "https://img.icons8.com/color/48/000000/amazon-web-services.png",
       alt: "aws",
     },
+    {
+      pnglink: "https://d2zv2ciw0ln4h1.cloudfront.net/uploads/hp-logo-hero_c94026101f.svg",
+      alt: "strapi",
+    },
   ];
 
   return (
@@ -52,7 +57,7 @@ export default function Skills() {
       {links.map((i, index) => {
         return (
           <Button className="btn-light" key={index.toString()} title={i.alt.toUpperCase()}>
-            <img src={i.pnglink} alt={i.alt} />
+            <img height="48" src={i.pnglink} alt={i.alt} />
           </Button>
         );
       })}

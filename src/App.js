@@ -56,7 +56,7 @@ function App() {
 
           <Container className="introductions d-flex flex-wrap align-content-center">
             <Container>
-              <Row className="my-5">
+              <Row className="my-1">
                 <Col sm={12} md>
                   <h1 className="display-2 text-sm-center text-md-right">Greg Basera</h1>
                 </Col>
