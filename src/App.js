@@ -1,7 +1,4 @@
-import Axios from "axios";
-import { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import pingDiscord from "./components/pingDiscord";
 
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
@@ -11,41 +8,6 @@ import resume from "./Resume_CV.pdf";
 import "./styles/main.css";
 
 function App() {
-  let names = [
-    "James",
-    "Mary",
-    "John",
-    "Patricia",
-    "Robert",
-    "Jennifer",
-    "Michael",
-    "Linda",
-    "William",
-    "Elizabeth",
-    "David",
-    "Barbara",
-    "Richard",
-    "Susan",
-    "Joseph",
-    "Jessica",
-    "Thomas",
-    "Sarah",
-    "Charles",
-    "Karen",
-  ];
-  const [randoName, setrandoName] = useState(names[Math.floor(Math.random() * 20)]);
-  // pingDiscord(`${randoName} mistakenly searched your fucking site!`);
-  Axios.get("https://cors-anywhere.herokuapp.com/http://api.ipify.org?format=json")
-    .then((res) => {
-      if (res.status === 200) {
-        pingDiscord(`${randoName} (@${res.data.ip}) mistakenly searched your fucking site!`);
-      } else {
-        pingDiscord(`${randoName} (@IPpinpoint failed) mistakenly searched your fucking site!`);
-      }
-      // console.log(res.data.ip);
-    })
-    .catch((error) => console.log(error));
-
   return (
     <Container className="panel p-0" fluid>
       <Row className="panel" noGutters>
@@ -70,7 +32,6 @@ function App() {
                     <Button
                       variant="outline-dark align-self-center"
                       onClick={() => {
-                        pingDiscord(`${randoName} tried to access your Résumé.`);
                         window.open(resume, "_blank");
                       }}>
                       Résumé
@@ -104,7 +65,7 @@ function App() {
 
         <Col sm={12} md={6} className="bg-light text-dark">
           <Container className="project-area py-3">
-            <Projects randoName={randoName} />
+            <Projects />
           </Container>
         </Col>
       </Row>

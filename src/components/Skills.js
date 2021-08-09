@@ -3,10 +3,10 @@ import { Button } from "react-bootstrap";
 
 export default function Skills() {
   const iconNames = [
-    "c-plain",
-    "cplusplus-plain",
-    "python-plain",
-    "java-plain",
+    // "c-plain",
+    // "cplusplus-plain",
+    // "python-plain",
+    // "java-plain",
     "html5-plain",
     "css3-plain",
     "bootstrap-plain",
@@ -14,14 +14,14 @@ export default function Skills() {
     "javascript-plain",
     "react-original",
     "jquery-plain",
-    "electron-original",
+    // "electron-original",
     "php-plain",
-    "codeigniter-plain",
+    // "codeigniter-plain",
     "mysql-plain",
     "mongodb-plain",
-    "apache-plain",
+    // "apache-plain",
     "git-plain",
-    "nodejs-plain",
+    // "nodejs-plain",
     // "express-original",
     "docker-plain",
   ];
@@ -35,10 +35,10 @@ export default function Skills() {
       pnglink: "https://img.icons8.com/color/48/000000/firebase.png",
       alt: "firebase",
     },
-    {
-      pnglink: "https://img.icons8.com/color/48/000000/amazon-web-services.png",
-      alt: "aws",
-    },
+    // {
+    //   pnglink: "https://img.icons8.com/color/48/000000/amazon-web-services.png",
+    //   alt: "aws",
+    // },
     {
       pnglink: "https://d2zv2ciw0ln4h1.cloudfront.net/uploads/hp-logo-hero_c94026101f.svg",
       alt: "strapi",

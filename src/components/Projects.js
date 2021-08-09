@@ -37,7 +37,7 @@ import {
 } from "../images";
 import CarouselModal from "./CarouselModal";
 import Gpic from "../G.png";
-import pingDiscord from "./pingDiscord";
+// import pingDiscord from "./pingDiscord";
 
 export default function Projects(props) {
   const pills = [
@@ -64,8 +64,23 @@ export default function Projects(props) {
     "AWS", // 20
     "Desktop",
     "Web",
+    "Strapi",
   ];
   const cards = [
+    {
+      title: "JO-DB",
+      pills: [22, 9, 18, 23],
+      description: `A Job Order personnel management tool.`,
+      code: "https://github.com/GregBasera/JO-DB",
+      clarray: [],
+    },
+    {
+      title: "AppliDB",
+      pills: [22, 9, 18, 23],
+      description: `An applicant management tool for a small HR department.`,
+      code: "https://github.com/GregBasera/AppliDB",
+      clarray: [],
+    },
     {
       title: "codeinblocks",
       pills: [22, 4, 5, 6, 8, 10, 12, 13, 14, 16, 20],
@@ -131,7 +146,7 @@ export default function Projects(props) {
   return (
     <CardColumns className="mb-5">
       <Card bg="dark" body>
-        <h5 className="mb-0 text-light">Projects</h5>
+        <h5 className="mb-0 text-light">Previous Projects</h5>
       </Card>
       {cards.map((i, index) => {
         return (
@@ -154,7 +169,6 @@ export default function Projects(props) {
                   size="sm"
                   variant="dark"
                   onClick={() => {
-                    pingDiscord(`${props.randoName} tried to take a peek in the ${i.title} repo.`);
                     window.open(i.code, "_blank");
                   }}>
                   Code
@@ -165,7 +179,6 @@ export default function Projects(props) {
                   variant="dark"
                   onClick={() => {
                     setcarouselArray(i.clarray);
-                    pingDiscord(`${props.randoName} looked at the screenshots of ${i.title}.`);
                     setmodalTitle(i.title);
                     setModalShow(true);
                   }}
@@ -181,7 +194,7 @@ export default function Projects(props) {
         <b>Apologies, </b>I lack the resources to host most of my projects like many full-stack devs do. Some screenshots and my contact info are provided if you want to learn more
         about them.
         <div className="text-right">
-          <small>- Page last updated: Dec 2, 2020</small>
+          <small>- Page last updated: Aug 10, 2021</small>
         </div>
       </Alert>
 
